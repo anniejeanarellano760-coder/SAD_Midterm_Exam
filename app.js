@@ -163,9 +163,9 @@ function dash() {
 }
 
 function scholars() {
-  $('#pane').innerHTML = `<div class="card"><h2>Scholars</h2><p class="mut">Add a new scholar, or update a student ID, name or program in the list below.</p>
-  <h3>Add scholar</h3><div class="row"><label>Full name<input id="an" autocomplete="off"></label><label>Student ID<input id="as" autocomplete="off"></label><label>Email<input id="ae" type="email" autocomplete="off"></label><label>Temporary password<input id="ap" autocomplete="off" placeholder="At least 6 characters"></label>
-  <label>Program<select id="ag"><option value="">Select a program</option>${programs.map(g => `<option value="${g.id}">${esc(g.name)}</option>`).join('')}</select></label></div><div class="actions" style="margin-top:0"><button class="pri" id="add">Add scholar</button></div>
+  $('#pane').innerHTML = `<div class="card"><h2>Scholars</h2><p class="mut">Register a new scholar, or update a student ID, name or program in the list below.</p>
+  <h3>Register scholar</h3><div class="row"><label>Full name<input id="an" autocomplete="off"></label><label>Student ID<input id="as" autocomplete="off"></label><label>Email<input id="ae" type="email" autocomplete="off"></label><label>Temporary password<input id="ap" autocomplete="off" placeholder="At least 6 characters"></label>
+  <label>Program<select id="ag"><option value="">Select a program</option>${programs.map(g => `<option value="${g.id}">${esc(g.name)}</option>`).join('')}</select></label></div><div class="actions" style="margin-top:0"><button class="pri" id="add">Register</button></div>
   <h3>Registered scholars</h3>
   <div class="tw"><table><tr><th>Account</th><th>Student ID</th><th>Name</th><th>Program</th><th></th></tr>
   ${D.sch.map(p => `<tr data-id="${p.id}"><td class="mut">${p.id.slice(0, 8)}</td><td><input class="sid" value="${esc(p.student_id)}"></td><td><input class="nm" value="${esc(p.full_name)}"></td>
